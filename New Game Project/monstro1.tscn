@@ -78,7 +78,9 @@ animations = [ {
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 4, -7 )
+scale = Vector2( 0.479167, 0.45 )
 frames = SubResource( 13 )
 animation = "andando"
-frame = 3
+frame = 1
 playing = true

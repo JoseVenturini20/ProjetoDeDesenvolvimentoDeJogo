@@ -163,3 +163,9 @@ frames = SubResource( 28 )
 animation = "parada"
 frame = 1
 playing = true
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 96, 68 )
+
+[node name="Area2D2" type="Area2D" parent="."]
+position = Vector2( 96, 65 )
