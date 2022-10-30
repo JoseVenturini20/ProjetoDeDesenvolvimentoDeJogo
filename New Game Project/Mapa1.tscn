@@ -1,9 +1,13 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Assets/terrainTiles_default.png" type="Texture" id=1]
 [ext_resource path="res://Assets/treeGreen_large.png" type="Texture" id=2]
 [ext_resource path="res://PathFollow2D.gd" type="Script" id=3]
-[ext_resource path="res://Scene.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Zombie1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://hero1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://Mapa1.tres" type="Theme" id=7]
+[ext_resource path="res://Mapa1.gd" type="Script" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_default.png 0"
@@ -92,7 +96,11 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, -69, 672, 0, 0, 0, 0, 459, 671, 0, 0, 0, 0, 480, 664, 0, 0, 0, 0, 479, 376, 0, 0, 0, 0, 471, 358, 0, 0, 0, 0, 433, 352, 0, 0, 0, 0, 186, 352, 0, 0, 0, 0, 163, 339, 0, 0, 0, 0, 160, 303, 0, 0, 0, 0, 160, 251, 0, 0, 0, 0, 171, 228, 0, 0, 0, 0, 197, 224, 0, 0, 0, 0, 256, 224, 0, 0, 0, 0, 287, 206, 0, 0, 0, 0, 296, 166, 0, 0, 0, 0, 322, 160, 0, 0, 0, 0, 897, 160, 0, 0, 0, 0, 908, 161, 0, 0, 0, 0, 916, 164, 0, 0, 0, 0, 923, 172, 0, 0, 0, 0, 927, 182, 0, 0, 0, 0, 928, 204, 0, 0, 0, 0, 928, 520, 0, 0, 0, 0, 925, 528, 0, 0, 0, 0, 921, 535, 0, 0, 0, 0, 916, 540, 0, 0, 0, 0, 901, 544, 0, 0, 0, 0, 861, 544, 0, 0, 0, 0, 787, 544, 0, 0, 0, 0, 700, 544, 0, 0, 0, 0, 689, 547, 0, 0, 0, 0, 681, 551, 0, 0, 0, 0, 675, 560, 0, 0, 0, 0, 672, 570, 0, 0, 0, 0, 672, 598, 0, 0, 0, 0, 672, 631, 0, 0, 0, 0, 672, 648, 0, 0, 0, 0, 675, 659, 0, 0, 0, 0, 684, 668, 0, 0, 0, 0, 697, 672, 0, 0, 0, 0, 717, 672, 0, 0, 0, 0, 789, 672, 0, 0, 0, 0, 857, 672, 0, 0, 0, 0, 937, 672, 0, 0, 0, 0, 1020, 672, 0, 0, 0, 0, 1102, 672, 0, 0, 0, 0, 1151, 672, 0, 0, 0, 0, 1169, 669, 0, 0, 0, 0, 1180, 660, 0, 0, 0, 0, 1184, 644, 0, 0, 0, 0, 1184, 615, 0, 0, 0, 0, 1184, 184, 0, 0, 0, 0, 1186, 176, 0, 0, 0, 0, 1192, 168, 0, 0, 0, 0, 1203, 162, 0, 0, 0, 0, 1215, 160, 0, 0, 0, 0, 1228, 160, 0, 0, 0, 0, 1373, 160 )
 }
 
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 15, 25.25 )
+
 [node name="Mapa1" type="Node2D"]
+script = ExtResource( 8 )
 
 [node name="Grama" type="TileMap" parent="."]
 tile_set = SubResource( 1 )
@@ -107,6 +115,10 @@ tile_data = PoolIntArray( -131072, 2, 0, -1, 2, 0, -65536, 2, 0, -65535, 2, 0, -
 [node name="KinematicBody2D" parent="." instance=ExtResource( 4 )]
 position = Vector2( -72, 659 )
 
+[node name="KinematicBody2D2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 424, 402 )
+rotation = 0.0802851
+
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 4 )
 
@@ -119,3 +131,33 @@ script = ExtResource( 3 )
 position = Vector2( -3, -13 )
 remote_path = NodePath("../../../KinematicBody2D")
 update_rotation = false
+
+[node name="LifeBar" type="ColorRect" parent="."]
+margin_left = 691.0
+margin_top = 13.0
+margin_right = 1263.0
+margin_bottom = 53.0
+color = Color( 0, 0, 0, 0.427451 )
+
+[node name="Sprite" type="Sprite" parent="LifeBar"]
+position = Vector2( 24, 20 )
+scale = Vector2( 0.0706522, 0.0730932 )
+texture = ExtResource( 6 )
+
+[node name="ProgressBar" type="ProgressBar" parent="LifeBar"]
+margin_left = 55.0
+margin_top = 8.0
+margin_right = 563.0
+margin_bottom = 34.0
+theme = ExtResource( 7 )
+custom_colors/font_color = Color( 0.25098, 1, 0.0431373, 1 )
+custom_colors/font_color_shadow = Color( 0.12549, 1, 0, 1 )
+value = 100.0
+percent_visible = false
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1367, 158 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -1106, 509 )
+shape = SubResource( 5 )

@@ -1,14 +1,22 @@
 extends KinematicBody2D
 
 onready var remote_transform = get_node("../Path2D/PathFollow2D")
+onready var path = get_node("../Path2D")
+onready var colision = get_node("../Area2D")
+onready var life = get_node("../LifeBar/ProgressBar")
 
-var speed = 100
+var speed = 200
 var move_direction = 0
 
 func _physics_process(delta):
 	MovementLoop(delta)
 
 func _process(delta):
+	if colision.overlaps_body(self):
+		remote_transform.set_offset(0)
+		life.value -= 20
+		queue_free()
+	
 	AnimationLoop()
 	
 func MovementLoop(delta):
@@ -19,7 +27,6 @@ func MovementLoop(delta):
 
 func AnimationLoop():
 	var animation_difection
-	print(move_direction)
 	if move_direction <= 15 and move_direction >= -15:
 		animation_difection = "Right"
 	elif move_direction <= 60 and move_direction >= 15:
