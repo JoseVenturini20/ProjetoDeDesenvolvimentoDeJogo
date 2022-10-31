@@ -161,7 +161,7 @@ animations = [ {
 position = Vector2( 101, 50 )
 frames = SubResource( 28 )
 animation = "parada"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Area2D" type="Area2D" parent="."]

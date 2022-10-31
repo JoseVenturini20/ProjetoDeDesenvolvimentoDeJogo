@@ -1,20 +1,28 @@
 extends KinematicBody2D
 
 onready var remote_transform = get_node("../Path2D/PathFollow2D")
+onready var remote_transform2 = get_node("../Path2D/PathFollow2D/RemoteTransform2D")
 onready var path = get_node("../Path2D")
 onready var colision = get_node("../Area2D")
+onready var hero = get_node("../KinematicBody2D2")
 onready var life = get_node("../LifeBar/ProgressBar")
 
-var speed = 200
+var speed = 100
 var move_direction = 0
+var lifeEni = 100
+
+func _ready():
+	remote_transform2.set_remote_node(self.get_path())
 
 func _physics_process(delta):
 	MovementLoop(delta)
 
 func _process(delta):
+	if lifeEni <0:
+		queue_free()
 	if colision.overlaps_body(self):
 		remote_transform.set_offset(0)
-		life.value -= 20
+		life.value -= 1
 		queue_free()
 	
 	AnimationLoop()

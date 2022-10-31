@@ -1,9 +1,30 @@
 extends KinematicBody2D
 
+var bullet = preload("res://tiro.tscn")
+var timer := Timer.new()
+export var enemies = []
+
+var building = true
+var canPlace = false
+
+var current_enemy
 
 func _physics_process(delta):
-	turn()
-	
-func turn():
-	var enemy_position = get_global_mouse_position()
-	get_node("hero1").look_at(enemy_position)
+	print(enemies)
+	if enemies != []:
+		if timer.time_left == 0.0:
+			add_child(timer)
+			timer.wait_time = 0.2
+			timer.autostart = true
+			timer.connect("timeout", self, "_on_timer_timeout")
+			timer.start()
+	else:
+		timer.stop()
+
+
+func _on_timer_timeout():
+	current_enemy = enemies[0]
+	var b = bullet.instance()
+	b.global_position = global_position
+	b.target = current_enemy
+	get_parent().add_child(b)
