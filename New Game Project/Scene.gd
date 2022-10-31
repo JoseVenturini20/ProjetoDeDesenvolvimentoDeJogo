@@ -22,7 +22,7 @@ func _process(delta):
 		queue_free()
 	if colision.overlaps_body(self):
 		remote_transform.set_offset(0)
-		life.value -= 1
+		life.value -= 20
 		queue_free()
 	
 	AnimationLoop()

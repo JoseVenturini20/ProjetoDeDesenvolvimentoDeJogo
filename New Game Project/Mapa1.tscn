@@ -114,6 +114,7 @@ tile_data = PoolIntArray( -131072, 2, 0, -1, 2, 0, -65536, 2, 0, -65535, 2, 0, -
 [node name="KinematicBody2D2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 424, 402 )
 rotation = 0.0802851
+time = 1.0
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 4 )

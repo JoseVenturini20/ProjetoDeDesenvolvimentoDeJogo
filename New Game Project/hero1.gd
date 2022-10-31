@@ -6,7 +6,7 @@ export var enemies = []
 
 var building = true
 var canPlace = false
-
+export var time = 0.2
 var current_enemy
 
 func _physics_process(delta):
@@ -14,7 +14,7 @@ func _physics_process(delta):
 	if enemies != []:
 		if timer.time_left == 0.0:
 			add_child(timer)
-			timer.wait_time = 0.2
+			timer.wait_time = time
 			timer.autostart = true
 			timer.connect("timeout", self, "_on_timer_timeout")
 			timer.start()
