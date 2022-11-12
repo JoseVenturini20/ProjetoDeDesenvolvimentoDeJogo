@@ -12,6 +12,9 @@ func _ready():
 	
 func _input_event(viewport, event, shape_idx ):
 	if(event.is_pressed()):
+		if(get_parent().gold < 10):
+			return
+		get_parent().changeGoldValue(-10)
 		var postion = self.get_children()[shape_idx].global_position
 		var instance = hero.instance()
 		instance.position = postion

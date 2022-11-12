@@ -3,11 +3,21 @@ var zombie = preload("res://Zombie1.tscn")
 var waves = [1, 3, 5, 7]
 var enemies = []
 var alies = []
+var gold = 20
+var mutex = Mutex.new()
+onready var goldNode = get_node("gold")
 #onready var heroArea = get_node("./KinematicBody2D2/Area2D2")
 #onready var hero = get_node("./KinematicBody2D2")
 var timerWaves := Timer.new()
 
+func changeGoldValue(value):
+	mutex.lock()
+	gold+=value
+	goldNode.text = str(floor(gold))
+	mutex.unlock()
+
 func _ready():
+	goldNode.text = str(gold)
 	timerWaves.wait_time = 15
 	add_child(timerWaves)
 	timerWaves.connect("timeout", self, "_on_timer_timeout_wave")
@@ -24,6 +34,7 @@ func _ready():
 		waves.remove(0)
 		
 func _physics_process(delta):
+	changeGoldValue(delta)
 	for enemie in enemies:
 		for alie in alies:
 			if not alie.enemies.has(enemie):

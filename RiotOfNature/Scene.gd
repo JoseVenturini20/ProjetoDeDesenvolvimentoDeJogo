@@ -27,6 +27,8 @@ func _physics_process(delta):
 
 func _process(delta):
 	if lifeEni <0:
+		get_parent().changeGoldValue(20)
+		get_parent().enemies.remove(get_parent().enemies.find(self))
 		queue_free()
 	if colision.overlaps_body(self):
 		remote_transform.set_offset(0)

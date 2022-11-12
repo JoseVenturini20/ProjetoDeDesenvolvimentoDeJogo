@@ -32,6 +32,8 @@ func _physics_process(delta):
 
 
 func _on_timer_timeout(a):
+	if enemies == []:
+		return
 	current_enemy = enemies[0]
 	var b = bullet.instance()
 	b.global_position = self.position
