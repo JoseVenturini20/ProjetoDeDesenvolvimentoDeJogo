@@ -1,12 +1,12 @@
 extends KinematicBody2D
 
-var bullet = preload("res://tiro.tscn")
+var bullet = preload("res://Scene/tiro.tscn")
 var timer := Timer.new()
 export var enemies = []
 
 var building = true
 var canPlace = false
-export var time = 0.2
+export var time = 0.8
 var current_enemy
 
 func _physics_process(delta):

@@ -2,11 +2,12 @@
 
 [ext_resource path="res://Assets/terrainTiles_default.png" type="Texture" id=1]
 [ext_resource path="res://Assets/treeGreen_large.png" type="Texture" id=2]
-[ext_resource path="res://theme.tres" type="Theme" id=3]
-[ext_resource path="res://Mapa1.gd" type="Script" id=4]
-[ext_resource path="res://896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png" type="Texture" id=6]
-[ext_resource path="res://Mapa1.tres" type="Theme" id=7]
-[ext_resource path="res://Area2D.gd" type="Script" id=8]
+[ext_resource path="res://Hud/theme.tres" type="Theme" id=3]
+[ext_resource path="res://Scripts/Mapa1.gd" type="Script" id=4]
+[ext_resource path="res://Assets/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png" type="Texture" id=6]
+[ext_resource path="res://Hud/Mapa1.tres" type="Theme" id=7]
+[ext_resource path="res://Scripts/Area2D.gd" type="Script" id=8]
+
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 30.875, 29.625 )

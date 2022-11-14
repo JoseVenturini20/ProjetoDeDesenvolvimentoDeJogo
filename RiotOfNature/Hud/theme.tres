@@ -1,9 +1,9 @@
 [gd_resource type="Theme" load_steps=8 format=2]
 
-[ext_resource path="res://BotaoPress.tres" type="StyleBox" id=1]
-[ext_resource path="res://Botao_Normal.tres" type="StyleBox" id=2]
+[ext_resource path="res://Hud/BotaoPress.tres" type="StyleBox" id=1]
+[ext_resource path="res://Hud/Botao_Normal.tres" type="StyleBox" id=2]
 [ext_resource path="res://Assets/BotoesGUI.png" type="Texture" id=4]
-[ext_resource path="res://Charmed-Pi.woff2" type="DynamicFontData" id=5]
+[ext_resource path="res://Hud/Charmed-Pi.woff2" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=3]
 size = 41

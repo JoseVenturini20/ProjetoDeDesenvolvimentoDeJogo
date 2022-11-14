@@ -1,5 +1,5 @@
 extends Node2D
-var zombie = preload("res://Zombie1.tscn")
+var zombie = preload("res://Scene/Zombie1.tscn")
 var waves = [1, 3, 5, 7]
 var enemies = []
 var alies = []

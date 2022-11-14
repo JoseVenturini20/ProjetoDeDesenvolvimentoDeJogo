@@ -2,7 +2,7 @@ extends Area2D
 
 
 var move = Vector2.ZERO
-var speed = 10
+var speed = 15
 var look_vec = Vector2.ZERO
 var target
 
@@ -20,7 +20,7 @@ func _physics_process(delta):
 			target.lifeEni -= 20
 			queue_free()
 		look_vec = target.global_position - global_position
-		move = move.move_toward(look_vec, delta*speed)
-		move = move.normalized() 
+		move = move.move_toward(look_vec, delta)
+		move = move.normalized() * speed
 		global_position += move
 	

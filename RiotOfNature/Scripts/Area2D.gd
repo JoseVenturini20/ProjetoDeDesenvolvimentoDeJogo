@@ -4,7 +4,7 @@ extends Area2D
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var hero = preload("res://hero1.tscn")
+var hero = preload("res://Scene/hero1.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

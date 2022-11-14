@@ -12,7 +12,7 @@ func _ready():
 
 func _input(event):
 	if(event.is_pressed()):
-		get_tree().change_scene_to(load('res://Mapa1.tscn'))
+		get_tree().change_scene_to(load('res://Scene/Mapa1.tscn'))
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

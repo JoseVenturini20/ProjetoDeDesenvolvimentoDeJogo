@@ -11,8 +11,8 @@ config_version=4
 [application]
 
 config/name="RiotOfNature"
-run/main_scene="res://HUD.tscn"
-config/icon="res://icon.png"
+run/main_scene="res://Scene/HUD.tscn"
+config/icon="res://Assets/icon.png"
 
 [display]
 
