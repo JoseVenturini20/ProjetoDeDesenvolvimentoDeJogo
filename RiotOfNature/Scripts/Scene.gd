@@ -8,6 +8,7 @@ var remote_transform
 var speed = 100
 var move_direction = 0
 var lifeEni = 100
+onready var lifeZombie = get_node("./LifeBarZombie/ProgressBar")
 
 func _ready():
 	remote_transform = PathFollow2D.new()
@@ -26,6 +27,7 @@ func _physics_process(delta):
 	MovementLoop(delta)
 
 func _process(delta):
+	
 	if lifeEni <0:
 		get_parent().changeGoldValue(20)
 		get_parent().enemies.remove(get_parent().enemies.find(self))

@@ -18,6 +18,7 @@ func _physics_process(delta):
 		$Sprite.look_at(target.global_position)
 		if self.overlaps_body(target):
 			target.lifeEni -= 20
+			target.lifeZombie.value -= 20
 			queue_free()
 		look_vec = target.global_position - global_position
 		move = move.move_toward(look_vec, delta)
