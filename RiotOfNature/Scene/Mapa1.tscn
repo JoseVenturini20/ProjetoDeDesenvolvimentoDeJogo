@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://Assets/terrainTiles_default.png" type="Texture" id=1]
 [ext_resource path="res://Assets/treeGreen_large.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://Scripts/TextureButton2.gd" type="Script" id=22]
 [ext_resource path="res://Scripts/TextureButton3.gd" type="Script" id=23]
 [ext_resource path="res://Scene/TextureButton.gd" type="Script" id=24]
+[ext_resource path="res://Assets/Leaf.png" type="Texture" id=25]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 30.875, 29.625 )
@@ -116,6 +117,16 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 15, 25.25 )
+
+[sub_resource type="CanvasItemMaterial" id=7]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.83, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
 
 [node name="Mapa1" type="Node2D"]
 script = ExtResource( 4 )
@@ -317,8 +328,28 @@ script = ExtResource( 24 )
 
 [node name="gold2" type="Label" parent="."]
 margin_left = 333.0
-margin_top = 706.0
-margin_right = 552.0
+margin_top = 131.0
+margin_right = 1179.0
 margin_bottom = 875.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Selected"
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+material = SubResource( 7 )
+position = Vector2( 868, 403 )
+z_index = 1
+amount = 100
+speed_scale = 0.5
+texture = ExtResource( 25 )
+emission_shape = 2
+emission_rect_extents = Vector2( 1000, 1000 )
+direction = Vector2( 1, 1 )
+spread = 0.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 149.27
+initial_velocity_random = 0.46
+damping = 5.0
+damping_random = 0.64
+scale_amount = 2.0
+color_ramp = SubResource( 8 )
+anim_speed = 1.0
