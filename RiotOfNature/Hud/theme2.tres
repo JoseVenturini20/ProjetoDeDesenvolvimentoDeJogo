@@ -7,7 +7,7 @@
 [ext_resource path="res://Hud/tinypixel.otf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=3]
-size = 35
+size = 14
 font_data = ExtResource( 3 )
 
 [sub_resource type="StyleBoxTexture" id=4]
@@ -18,7 +18,7 @@ margin_top = 26.5634
 modulate_color = Color( 0.760784, 0.760784, 0.760784, 1 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 33
+size = 57
 font_data = ExtResource( 5 )
 
 [resource]
