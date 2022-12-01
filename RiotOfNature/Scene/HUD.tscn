@@ -176,7 +176,7 @@ modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
 position = Vector2( 638.5, 437 )
 scale = Vector2( 1.59625, 1.46667 )
 frames = SubResource( 2 )
-frame = 59
+frame = 122
 playing = true
 
 [node name="Button_play" type="Button" parent="."]
@@ -216,9 +216,9 @@ stretch_mode = 1
 [node name="Label" type="Label" parent="."]
 modulate = Color( 0.729412, 0.729412, 0.729412, 1 )
 anchor_right = 0.367
-margin_left = 215.0
+margin_left = 184.0
 margin_top = 248.0
-margin_right = 473.0
+margin_right = 442.0
 margin_bottom = 361.0
 theme = ExtResource( 1 )
 custom_colors/font_color = Color( 0.337255, 0.337255, 0.337255, 1 )

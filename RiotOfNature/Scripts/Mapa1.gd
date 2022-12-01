@@ -1,6 +1,8 @@
 extends Node2D
 var zombie = preload("res://Scene/Zombie1.tscn")
-var waves = [1, 3, 5, 7]
+onready var button_next = get_node("Button_play")
+onready var button_exit = get_node("Button_exit")
+var waves = [1, 3]
 var enemies = []
 var alies = []
 var gold = 20
@@ -17,6 +19,8 @@ func changeGoldValue(value):
 	mutex.unlock()
 
 func _ready():
+	button_next.hide()
+	button_exit.hide()
 	goldNode.text = str(gold)
 	timerWaves.wait_time = 15
 	add_child(timerWaves)
