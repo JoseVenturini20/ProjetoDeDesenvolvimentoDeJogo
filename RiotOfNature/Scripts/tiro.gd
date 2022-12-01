@@ -5,7 +5,7 @@ var move = Vector2.ZERO
 var speed = 15
 var look_vec = Vector2.ZERO
 var target
-
+var damage
 func _ready():
 	if(is_instance_valid(target)):
 		look_vec = target.global_position - global_position
@@ -17,8 +17,8 @@ func _physics_process(delta):
 	if(is_instance_valid(target)):
 		$Sprite.look_at(target.global_position)
 		if self.overlaps_body(target):
-			target.lifeEni -= 20
-			target.lifeZombie.value -= 20
+			target.lifeEni -= damage
+			target.lifeZombie.value -= damage
 			queue_free()
 		look_vec = target.global_position - global_position
 		move = move.move_toward(look_vec, delta)

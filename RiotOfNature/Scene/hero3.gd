@@ -36,7 +36,7 @@ func _on_timer_timeout(a):
 	if enemies == []:
 		return
 	var b = bullet.instance()
-	b.damage = 10
+	b.damage = 30
 	b.global_position = self.position
 	b.target = current_enemy
 	get_parent().add_child(b)
