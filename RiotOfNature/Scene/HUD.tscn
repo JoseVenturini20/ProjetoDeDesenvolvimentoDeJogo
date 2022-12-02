@@ -126,7 +126,7 @@
 [ext_resource path="res://Assets/Sprite_init/frame_087_delay-0.04s.png" type="Texture" id=124]
 [ext_resource path="res://Assets/Sprite_init/frame_101_delay-0.04s.png" type="Texture" id=125]
 [ext_resource path="res://Assets/Sprite_init/frame_088_delay-0.04s.png" type="Texture" id=126]
-[ext_resource path="res://Assets/hud/Banner.png" type="Texture" id=127]
+[ext_resource path="res://Hud/hud/Banner.png" type="Texture" id=127]
 [ext_resource path="res://Assets/Sprite_init/frame_108_delay-0.04s.png" type="Texture" id=128]
 [ext_resource path="res://Assets/Sprite_init/frame_113_delay-0.04s.png" type="Texture" id=129]
 [ext_resource path="res://Assets/Sprite_init/frame_111_delay-0.04s.png" type="Texture" id=130]
@@ -176,7 +176,7 @@ modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
 position = Vector2( 638.5, 437 )
 scale = Vector2( 1.59625, 1.46667 )
 frames = SubResource( 2 )
-frame = 124
+frame = 146
 playing = true
 
 [node name="Button_play" type="Button" parent="."]

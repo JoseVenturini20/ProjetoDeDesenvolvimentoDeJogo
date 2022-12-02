@@ -368,7 +368,6 @@ text = "EXIT"
 script = ExtResource( 35 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-position = Vector2( 653, 370 )
 stream = ExtResource( 37 )
 autoplay = true
 
