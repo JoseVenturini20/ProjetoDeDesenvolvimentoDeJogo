@@ -35,7 +35,9 @@ func _process(delta):
 	if colision.overlaps_body(self):
 		remote_transform.set_offset(0)
 		life.value -= 20
+		get_parent().enemies.remove(get_parent().enemies.find(self))
 		queue_free()
+		
 	
 	AnimationLoop()
 	

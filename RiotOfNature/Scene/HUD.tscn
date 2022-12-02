@@ -176,7 +176,7 @@ modulate = Color( 0.568627, 0.568627, 0.568627, 1 )
 position = Vector2( 638.5, 437 )
 scale = Vector2( 1.59625, 1.46667 )
 frames = SubResource( 2 )
-frame = 122
+frame = 140
 playing = true
 
 [node name="Button_play" type="Button" parent="."]

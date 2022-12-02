@@ -13,7 +13,6 @@ func _physics_process(delta):
 	if current_enemy == null:
 		for enemy in enemies:
 			if($Area2D2.overlaps_body(enemy)):
-				print(enemy, enemy.position, self.position)
 				current_enemy = enemy
 				break
 	if current_enemy != null:

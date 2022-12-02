@@ -17,6 +17,7 @@ config/icon="res://Assets/icon.png"
 [autoload]
 
 Selected="*res://Scripts/selected.gd"
+Progress="*res://Scripts/progress.gd"
 
 [display]
 

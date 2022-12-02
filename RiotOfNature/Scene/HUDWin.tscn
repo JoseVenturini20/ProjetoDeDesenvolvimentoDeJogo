@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Hud/theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/bannerwin.png" type="Texture" id=2]
@@ -7,8 +7,10 @@
 [ext_resource path="res://Hud/theme2.tres" type="Theme" id=5]
 [ext_resource path="res://Scripts/Button_exit.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Button_next.gd" type="Script" id=7]
+[ext_resource path="res://Scene/HUDWin.gd" type="Script" id=8]
 
 [node name="Node" type="Node"]
+script = ExtResource( 8 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_left = -400.0
