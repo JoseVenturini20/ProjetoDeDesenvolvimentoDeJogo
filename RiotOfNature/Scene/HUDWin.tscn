@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Hud/theme.tres" type="Theme" id=1]
-[ext_resource path="res://Assets/bannerwin.png" type="Texture" id=2]
-[ext_resource path="res://Assets/1-removebg-preview.png" type="Texture" id=3]
-[ext_resource path="res://Assets/backgroundd (1).jpg" type="Texture" id=4]
+[ext_resource path="res://Assets/stars/1 star.png" type="Texture" id=1]
+[ext_resource path="res://Assets/hud/bannerwin.png" type="Texture" id=2]
+[ext_resource path="res://Assets/hud/1-removebg-preview.png" type="Texture" id=3]
+[ext_resource path="res://Assets/hud/backgroundd (1).jpg" type="Texture" id=4]
 [ext_resource path="res://Hud/theme2.tres" type="Theme" id=5]
 [ext_resource path="res://Scripts/Button_exit.gd" type="Script" id=6]
 [ext_resource path="res://Scripts/Button_next.gd" type="Script" id=7]
-[ext_resource path="res://Scene/HUDWin.gd" type="Script" id=8]
+[ext_resource path="res://Scripts/HUDWin.gd" type="Script" id=8]
 
 [node name="Node" type="Node"]
 script = ExtResource( 8 )
@@ -28,23 +28,23 @@ texture = ExtResource( 3 )
 stretch_mode = 1
 
 [node name="Button_play" type="Button" parent="."]
-margin_left = 504.0
-margin_top = 337.0
-margin_right = 836.0
-margin_bottom = 455.0
+margin_left = 665.0
+margin_top = 654.0
+margin_right = 879.0
+margin_bottom = 721.0
 focus_mode = 0
-theme = ExtResource( 1 )
+theme = ExtResource( 5 )
 enabled_focus_mode = 0
 text = "NEXT"
 script = ExtResource( 7 )
 
 [node name="Button_exit" type="Button" parent="."]
-margin_left = 503.0
-margin_top = 534.0
-margin_right = 835.0
-margin_bottom = 652.0
+margin_left = 455.0
+margin_top = 655.0
+margin_right = 653.0
+margin_bottom = 722.0
 focus_mode = 0
-theme = ExtResource( 1 )
+theme = ExtResource( 5 )
 enabled_focus_mode = 0
 text = "EXIT"
 script = ExtResource( 6 )
@@ -71,3 +71,11 @@ margin_bottom = 169.0
 theme = ExtResource( 5 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "COMPLETE"
+
+[node name="TextureRect4" type="TextureRect" parent="."]
+margin_left = 359.0
+margin_top = 153.0
+margin_right = 1011.0
+margin_bottom = 780.0
+texture = ExtResource( 1 )
+expand = true

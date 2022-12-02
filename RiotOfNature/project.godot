@@ -11,13 +11,13 @@ config_version=4
 [application]
 
 config/name="RiotOfNature"
-run/main_scene="res://Scene/HUDWin.tscn"
-config/icon="res://Assets/icon.png"
+run/main_scene="res://Scene/HUD.tscn"
 
 [autoload]
 
 Selected="*res://Scripts/selected.gd"
 Progress="*res://Scripts/progress.gd"
+Transition="*res://Scene/transition.tscn"
 
 [display]
 

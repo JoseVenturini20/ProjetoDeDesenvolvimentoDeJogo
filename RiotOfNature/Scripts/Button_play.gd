@@ -6,4 +6,4 @@ func _ready():
 	pass # Replace with function body.
 
 func _pressed():
-		get_tree().change_scene_to(load('res://Scene/Mapa1.tscn'))
+		get_tree().change_scene_to(load('res://Scene/HUDFases.tscn'))

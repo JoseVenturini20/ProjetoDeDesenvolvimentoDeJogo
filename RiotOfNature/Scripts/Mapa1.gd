@@ -1,6 +1,6 @@
 extends Node2D
 var zombie = preload("res://Scene/Zombie1.tscn")
-var waves = [1, 3]
+var waves = [1]
 var enemies = []
 var alies = []
 var gold = 20
@@ -8,6 +8,7 @@ var mutex = Mutex.new()
 onready var goldNode = get_node("gold")
 #onready var heroArea = get_node("./KinematicBody2D2/Area2D2")
 #onready var hero = get_node("./KinematicBody2D2")
+onready var life = get_node("LifeBar/ProgressBar")
 var timerWaves := Timer.new()
 onready var progress = get_node("/root/Progress")
 func changeGoldValue(value):
@@ -40,8 +41,18 @@ func _physics_process(delta):
 			if not alie.enemies.has(enemie):
 				alie.enemies.append(enemie)
 	if(len(waves) == 0 and len(enemies) == 0 and timerWaves.time_left<=0):
-		progress.fases.append({"fase": 1, "estrelas": 3})
-		get_tree().change_scene_to(load('res://Scene/HUDWin.tscn'))
+		progress.currentStep = 1
+		if(life.value==100):
+			progress.fases.fase1.stars = 3
+			progress.fases.fase2.disabled = false
+		elif(life.value>65):
+			if(progress.fases.fase1.stars < 2):
+				progress.fases.fase1.stars = 2
+			progress.fases.fase2.disabled = false
+		else:
+			if(progress.fases.fase1.stars < 1):
+				progress.fases.fase1.stars = 1
+		Transition.change_scene('res://Scene/HUDWin.tscn')
 
 func _on_timer_timeout() -> void:
 	var instance = zombie.instance()

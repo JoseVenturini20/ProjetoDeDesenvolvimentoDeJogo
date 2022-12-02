@@ -3,7 +3,7 @@
 [ext_resource path="res://Hud/BotaoPress.tres" type="StyleBox" id=1]
 [ext_resource path="res://Hud/Botao_Normal.tres" type="StyleBox" id=2]
 [ext_resource path="res://Hud/PeaberryMono.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/BotoesGUI.png" type="Texture" id=4]
+[ext_resource path="res://Assets/hud/BotoesGUI.png" type="Texture" id=4]
 [ext_resource path="res://Hud/tinypixel.otf" type="DynamicFontData" id=5]
 
 [sub_resource type="DynamicFont" id=3]
@@ -19,6 +19,7 @@ modulate_color = Color( 0.760784, 0.760784, 0.760784, 1 )
 
 [sub_resource type="DynamicFont" id=5]
 size = 33
+outline_color = Color( 0.960784, 0.945098, 0.945098, 1 )
 font_data = ExtResource( 5 )
 
 [resource]

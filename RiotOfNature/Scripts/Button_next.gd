@@ -1,6 +1,5 @@
 extends Button
 
-
 func _ready():
 	self.connect("pressed", self, "_button_pressed")
 	pass # Replace with function body.
