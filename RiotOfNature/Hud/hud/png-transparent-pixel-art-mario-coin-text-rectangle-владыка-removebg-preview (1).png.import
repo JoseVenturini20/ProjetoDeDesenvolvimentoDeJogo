@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png-1d31b86c66f6a0fd61e3af6838bd6136.stex"
+path="res://.import/png-transparent-pixel-art-mario-coin-text-rectangle-владыка-removebg-preview (1).png-b1bc3bc4c65e433600d8809a09bed5ee.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png"
-dest_files=[ "res://.import/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png-1d31b86c66f6a0fd61e3af6838bd6136.stex" ]
+source_file="res://Hud/hud/png-transparent-pixel-art-mario-coin-text-rectangle-владыка-removebg-preview (1).png"
+dest_files=[ "res://.import/png-transparent-pixel-art-mario-coin-text-rectangle-владыка-removebg-preview (1).png-b1bc3bc4c65e433600d8809a09bed5ee.stex" ]
 
 [params]
 

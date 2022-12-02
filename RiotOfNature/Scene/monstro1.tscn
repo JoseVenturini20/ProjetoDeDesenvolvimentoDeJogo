@@ -56,5 +56,4 @@ position = Vector2( 4, -7 )
 scale = Vector2( 0.479167, 0.45 )
 frames = SubResource( 13 )
 animation = "andando"
-frame = 1
 playing = true

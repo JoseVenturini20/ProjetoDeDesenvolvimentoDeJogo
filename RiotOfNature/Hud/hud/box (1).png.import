@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BotoesGUI.png-a2865be1724489a77e73d926496d9b84.stex"
+path="res://.import/box (1).png-d68286489829a78f7678e0ccc3f5f578.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/BotoesGUI.png"
-dest_files=[ "res://.import/BotoesGUI.png-a2865be1724489a77e73d926496d9b84.stex" ]
+source_file="res://Hud/hud/box (1).png"
+dest_files=[ "res://.import/box (1).png-d68286489829a78f7678e0ccc3f5f578.stex" ]
 
 [params]
 

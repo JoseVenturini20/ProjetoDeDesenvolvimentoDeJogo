@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/frame_000_delay-0.04s.png-1498e765c3e8dfab9633f258a857a697.stex"
+path="res://.import/1-removebg-preview.png-7b4a6881373d14e09e5e93b7885430a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/frame_000_delay-0.04s.png"
-dest_files=[ "res://.import/frame_000_delay-0.04s.png-1498e765c3e8dfab9633f258a857a697.stex" ]
+source_file="res://Hud/hud/1-removebg-preview.png"
+dest_files=[ "res://.import/1-removebg-preview.png-7b4a6881373d14e09e5e93b7885430a0.stex" ]
 
 [params]
 

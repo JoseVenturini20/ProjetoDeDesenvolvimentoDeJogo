@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/defeat.png-325ef59de201b0cbb0a4d3881f72b636.stex"
+path="res://.import/bannerwin.png-c1a13181bd76efe80efa5aefcda960c0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/defeat.png"
-dest_files=[ "res://.import/defeat.png-325ef59de201b0cbb0a4d3881f72b636.stex" ]
+source_file="res://Hud/hud/bannerwin.png"
+dest_files=[ "res://.import/bannerwin.png-c1a13181bd76efe80efa5aefcda960c0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/box.png-3efefaa4d689d4e0590f645969a4fb75.stex"
+path="res://.import/backgroundd (1).jpg-e00e347c3fde1171f305ef737311709d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/box.png"
-dest_files=[ "res://.import/box.png-3efefaa4d689d4e0590f645969a4fb75.stex" ]
+source_file="res://Hud/hud/backgroundd (1).jpg"
+dest_files=[ "res://.import/backgroundd (1).jpg-e00e347c3fde1171f305ef737311709d.stex" ]
 
 [params]
 

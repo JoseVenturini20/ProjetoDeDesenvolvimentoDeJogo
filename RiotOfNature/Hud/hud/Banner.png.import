@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bannerwin.png-a246b8fcb05fde3ef574f4653462ad77.stex"
+path="res://.import/Banner.png-2b86387e0085ab00e2b7308d670883ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/bannerwin.png"
-dest_files=[ "res://.import/bannerwin.png-a246b8fcb05fde3ef574f4653462ad77.stex" ]
+source_file="res://Hud/hud/Banner.png"
+dest_files=[ "res://.import/Banner.png-2b86387e0085ab00e2b7308d670883ea.stex" ]
 
 [params]
 

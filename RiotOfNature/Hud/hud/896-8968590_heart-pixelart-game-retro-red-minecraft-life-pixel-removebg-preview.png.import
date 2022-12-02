@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/backgroundd (1).jpg-97158f60b5fc27f1dbeb96b81aabebfa.stex"
+path="res://.import/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png-da4259fb22c92caa649d09b10136d175.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/hud/backgroundd (1).jpg"
-dest_files=[ "res://.import/backgroundd (1).jpg-97158f60b5fc27f1dbeb96b81aabebfa.stex" ]
+source_file="res://Hud/hud/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png"
+dest_files=[ "res://.import/896-8968590_heart-pixelart-game-retro-red-minecraft-life-pixel-removebg-preview.png-da4259fb22c92caa649d09b10136d175.stex" ]
 
 [params]
 

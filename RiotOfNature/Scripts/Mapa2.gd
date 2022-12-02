@@ -38,7 +38,7 @@ func _ready():
 		waves.remove(0)
 		
 func _physics_process(delta):
-	changeGoldValue(delta)
+	changeGoldValue(delta/2)
 	for enemie in enemies:
 		for alie in alies:
 			if not alie.enemies.has(enemie):
