@@ -8,7 +8,6 @@
 [ext_resource path="res://Scripts/Button_next.gd" type="Script" id=7]
 [ext_resource path="res://Scripts/ReplayButton.gd" type="Script" id=9]
 
-
 [node name="Node" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]

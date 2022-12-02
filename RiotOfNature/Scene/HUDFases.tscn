@@ -15,7 +15,6 @@
 [ext_resource path="res://Assets/fases/map2Lock.png" type="Texture" id=13]
 [ext_resource path="res://Assets/stars/0star.png" type="Texture" id=14]
 
-
 [node name="Node" type="Node"]
 script = ExtResource( 8 )
 
