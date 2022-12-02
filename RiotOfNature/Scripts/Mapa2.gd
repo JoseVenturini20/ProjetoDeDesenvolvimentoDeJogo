@@ -1,6 +1,6 @@
 extends Node2D
 var zombie = preload("res://Scene/Zombie1.tscn")
-var waves = [1]
+var waves = [1,3,5,7]
 var enemies = []
 var alies = []
 var gold = 20
@@ -18,6 +18,7 @@ func changeGoldValue(value):
 	mutex.unlock()
 
 func _ready():
+	progress.currentStep = 2
 	goldNode.text = str(gold)
 	timerWaves.wait_time = 15
 	add_child(timerWaves)
@@ -41,7 +42,6 @@ func _physics_process(delta):
 			if not alie.enemies.has(enemie):
 				alie.enemies.append(enemie)
 	if(len(waves) == 0 and len(enemies) == 0 and timerWaves.time_left<=0):
-		progress.currentStep = 2
 		if(life.value==100):
 			progress.fases.fase2.stars = 3
 			progress.fases.fase2.bestStars = 3

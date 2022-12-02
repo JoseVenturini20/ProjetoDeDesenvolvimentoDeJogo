@@ -35,6 +35,8 @@ func _process(delta):
 	if colision.overlaps_body(self):
 		remote_transform.set_offset(0)
 		life.value -= 20
+		if(life.value<=0):
+			Transition.change_scene('res://Scene/HUDDefeat.tscn')
 		get_parent().enemies.remove(get_parent().enemies.find(self))
 		queue_free()
 		
