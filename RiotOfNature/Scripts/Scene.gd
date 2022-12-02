@@ -9,6 +9,7 @@ var speed = 100
 var move_direction = 0
 var lifeEni = 100
 onready var lifeZombie = get_node("./LifeBarZombie/ProgressBar")
+onready var zombieDamege = get_node("AudioStreamPlayer2D")
 
 func _ready():
 	remote_transform = PathFollow2D.new()
@@ -33,6 +34,7 @@ func _process(delta):
 		get_parent().enemies.remove(get_parent().enemies.find(self))
 		queue_free()
 	if colision.overlaps_body(self):
+		zombieDamege.play()
 		remote_transform.set_offset(0)
 		life.value -= 20
 		if(life.value<=0):

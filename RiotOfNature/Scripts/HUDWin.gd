@@ -6,12 +6,14 @@ extends Node
 # var b = "text"
 onready var progress = get_node("/root/Progress")
 onready var stars = get_node("TextureRect4")
+onready var win = get_node("AudioStreamPlayer2D")
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if(progress.currentStep == 0):
 		return
 	var res = load("res://assets/stars/"+str(progress.fases["fase" + str(progress.currentStep)].stars)+"star.png")
 	stars.texture = res
+	win.play()
 	pass # Replace with function body.
 
 

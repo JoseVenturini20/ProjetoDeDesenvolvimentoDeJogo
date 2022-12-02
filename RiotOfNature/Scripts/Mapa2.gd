@@ -11,6 +11,7 @@ onready var goldNode = get_node("gold")
 onready var life = get_node("LifeBar/ProgressBar")
 var timerWaves := Timer.new()
 onready var progress = get_node("/root/Progress")
+onready var music = get_node("AudioStreamPlayer2D")
 func changeGoldValue(value):
 	mutex.lock()
 	gold+=value
@@ -18,6 +19,7 @@ func changeGoldValue(value):
 	mutex.unlock()
 
 func _ready():
+	music.play()
 	progress.currentStep = 2
 	goldNode.text = str(gold)
 	timerWaves.wait_time = 15

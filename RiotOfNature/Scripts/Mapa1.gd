@@ -1,11 +1,12 @@
 extends Node2D
 var zombie = preload("res://Scene/Zombie1.tscn")
-var waves = [10,3,5,7]
+var waves = [1,3,5,7]
 var enemies = []
 var alies = []
 var gold = 20
 var mutex = Mutex.new()
 onready var goldNode = get_node("gold")
+onready var music = get_node("AudioStreamPlayer2D")
 #onready var heroArea = get_node("./KinematicBody2D2/Area2D2")
 #onready var hero = get_node("./KinematicBody2D2")
 onready var life = get_node("LifeBar/ProgressBar")
@@ -18,6 +19,7 @@ func changeGoldValue(value):
 	mutex.unlock()
 
 func _ready():
+	music.play()
 	progress.currentStep = 1
 	goldNode.text = str(gold)
 	timerWaves.wait_time = 15

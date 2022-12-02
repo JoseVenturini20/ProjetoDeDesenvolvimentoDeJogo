@@ -6,8 +6,10 @@ var speed = 15
 var look_vec = Vector2.ZERO
 var target
 var damage
+onready var tiroSound = get_node("AudioStreamPlayer2D")
 func _ready():
 	if(is_instance_valid(target)):
+		tiroSound.play()
 		look_vec = target.global_position - global_position
 		
 func _physics_process(delta):

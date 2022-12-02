@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=46 format=2]
 
 [ext_resource path="res://Assets/map/terrainTiles_default.png" type="Texture" id=1]
 [ext_resource path="res://Assets/map/treeGreen_large.png" type="Texture" id=2]
@@ -36,6 +36,7 @@
 [ext_resource path="res://Assets/map/pedras.png" type="Texture" id=34]
 [ext_resource path="res://Scripts/Button_exit.gd" type="Script" id=35]
 [ext_resource path="res://Hud/theme2.tres" type="Theme" id=36]
+[ext_resource path="res://Assets/Sounds/Swinging Pants.ogg" type="AudioStream" id=37]
 
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 30.875, 29.625 )
@@ -436,3 +437,7 @@ theme = ExtResource( 36 )
 enabled_focus_mode = 0
 text = "EXIT"
 script = ExtResource( 35 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 37 )
+autoplay = true
