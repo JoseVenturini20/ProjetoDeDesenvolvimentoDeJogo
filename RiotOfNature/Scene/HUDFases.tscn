@@ -13,7 +13,7 @@
 [ext_resource path="res://Assets/fases/map2Pressed.png" type="Texture" id=11]
 [ext_resource path="res://Assets/fases/map2.png" type="Texture" id=12]
 [ext_resource path="res://Assets/fases/map2Lock.png" type="Texture" id=13]
-[ext_resource path="res://Assets/stars/1 star.png" type="Texture" id=14]
+[ext_resource path="res://Assets/stars/0star.png" type="Texture" id=14]
 
 [node name="Node" type="Node"]
 script = ExtResource( 8 )
@@ -58,17 +58,19 @@ texture_disabled = ExtResource( 13 )
 script = ExtResource( 9 )
 
 [node name="TextureRect2" type="TextureRect" parent="."]
-margin_left = 310.0
-margin_top = 417.0
-margin_right = 512.0
-margin_bottom = 600.0
+margin_left = 324.0
+margin_top = 435.0
+margin_right = 491.0
+margin_bottom = 560.0
+mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true
 
 [node name="TextureRect3" type="TextureRect" parent="."]
-margin_left = 755.0
-margin_top = 416.0
-margin_right = 957.0
-margin_bottom = 599.0
+margin_left = 770.0
+margin_top = 432.0
+margin_right = 935.0
+margin_bottom = 553.0
+mouse_filter = 2
 texture = ExtResource( 14 )
 expand = true

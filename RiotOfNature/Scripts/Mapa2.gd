@@ -41,20 +41,18 @@ func _physics_process(delta):
 			if not alie.enemies.has(enemie):
 				alie.enemies.append(enemie)
 	if(len(waves) == 0 and len(enemies) == 0 and timerWaves.time_left<=0):
-		progress.currentStep = 1
+		progress.currentStep = 2
 		if(life.value==100):
-			progress.fases.fase1.stars = 3
-			progress.fases.fase1.bestStars = 3
-			progress.fases.fase2.disabled = false
+			progress.fases.fase2.stars = 3
+			progress.fases.fase2.bestStars = 3
 		elif(life.value>65):
-			if(progress.fases.fase1.stars < 2):
-				progress.fases.fase1.bestStars = 2
-			progress.fases.fase1.stars = 2
-			progress.fases.fase2.disabled = false
+			if(progress.fases.fase2.stars < 2):
+				progress.fases.fase2.bestStars = 2
+			progress.fases.fase2.stars = 2
 		else:
-			if(progress.fases.fase1.stars < 1):
-				progress.fases.fase1.bestStars = 1
-			progress.fases.fase1.stars = 1
+			if(progress.fases.fase2.stars < 1):
+				progress.fases.fase2.bestStars = 1
+				progress.fases.fase2.stars = 1
 		Transition.change_scene('res://Scene/HUDWin.tscn')
 
 func _on_timer_timeout() -> void:

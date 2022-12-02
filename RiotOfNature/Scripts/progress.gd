@@ -8,11 +8,13 @@ extends Node
 var fases = {
 	"fase1":{
 		"stars":0,
-		"disabled":false
+		"disabled":false,
+		"bestStars":0
 	},
 	"fase2":{
 		"stars":0,
-		"disabled":true
+		"disabled":true,
+		"bestStars":0
 	}
 }
 var currentStep = 0
